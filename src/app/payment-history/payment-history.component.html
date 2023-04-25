@@ -1,0 +1,32 @@
+<app-menu></app-menu>
+<h2>Payment History</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Id </th> 
+            <th> CustomerId </th>
+            <th>LoanplanId</th>
+            <th>Payment Date</th>
+            <th>EMIAmount</th>
+            <th>LateFee</th>
+            <th>PaymentMethod</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let payment of payments">
+            <td> {{payment.id}} </td>
+            <td> {{payment.customerid}} </td>
+            <td> {{payment.loanplanid}} </td>
+            <td> {{payment.paymentdate}} </td>
+            <td> {{payment.amount}} </td>
+            <td> {{payment.latefee}} </td>
+           
+            <td> {{payment.paymentmethod}} </td>
+            
+        </tr>
+    </tbody>
+
+</table>
+
+

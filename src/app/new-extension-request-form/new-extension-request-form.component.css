@@ -1,0 +1,19 @@
+.container {
+    background: -webkit-linear-gradient(45deg, rgba(66, 183, 245, 0.8) 0%, rgba(66, 245, 189, 0.4) 100%);
+}
+
+h1 {
+    text-align: center;
+    padding-top: 10px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.title {
+    background-image: linear-gradient(to right, #727373, #8a8b8c, #a3a5a5, #bdbebf, #d7d9da, #dbdddf, #e0e2e3, #e4e6e8, #d2d5d7, #c1c3c7, #b0b3b6, #a0a2a6);
+    height: 80px;
+}
+
+.container1 {
+    margin-bottom: 50px;
+    /* adjust this value as per your requirement */
+}

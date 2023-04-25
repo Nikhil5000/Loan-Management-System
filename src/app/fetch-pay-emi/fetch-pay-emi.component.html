@@ -1,0 +1,57 @@
+<app-menu></app-menu>
+<div class="col-md-5 offset-md-3" id="container">
+    <h3> PAY YOUR EMI HERE </h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label> Id </label>
+            <input type="number" class="form-control" id="id"
+            [(ngModel)]= "emipay.id" name="id" [ngModelOptions]="{standalone: true}">
+    
+        </div>
+        <div class="form-group">
+            <label> Customer Id </label>
+            <input type="number" class="form-control" id="customerId"
+            [(ngModel)]= "emipay.customerid" name="customerId" [ngModelOptions]="{standalone: true}">
+    
+        </div>
+        <div class="form-group">
+            <label> Loan Plan Id </label>
+            <input type="number" class="form-control" id="loanPlanId"
+            [(ngModel)]= "emipay.loanplanid" name="loanPlanId" [ngModelOptions]="{standalone: true}">
+    
+        </div>
+        <div class="form-group">
+            <label> Payment Date </label>
+            <input type="date" class="form-control" id="paymentDate"
+            [(ngModel)]= "emipay.paymentdate" name="paymentDate" [ngModelOptions]="{standalone: true}">
+    
+        </div>
+        <div class="form-group">
+            <label> EMI Amount </label>
+            <input type="number" class="form-control" id="emiAmount"
+            [(ngModel)]= "emipay.amount" name="emiAmount" [ngModelOptions]="{standalone: true}">
+    
+        </div>
+        <div class="form-group">
+            <label> LateFee </label>
+            <input type="number" class="form-control" id="numberOfEMIs"
+            [(ngModel)]= "emipay.latefee" name="numberOfEMIs" [ngModelOptions]="{standalone: true}">
+    
+        </div>
+        <div class="form-group">
+            <label> Payment Method </label>
+            <select class="form-control"  id="status" [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="emipay.paymentmethod" name="payMethod">
+            <option value="Card" [(ngModel)]="emipay.paymentmethod">Card</option>
+            <option value="NetBanking" [(ngModel)]="emipay.paymentmethod">NetBanking</option>
+            <option value="UPI" [(ngModel)]="emipay.paymentmethod">UPI</option>
+            </select>
+    
+        </div>
+      
+        <button class="btn btn-success" (click)="onSubmit()" type="submit">Submit</button>
+
+       
+    </form>
+    </div>
+    

@@ -1,0 +1,62 @@
+<app-menu></app-menu>
+<h1>Our Loan Plans For You!!</h1>
+<br>
+<br>
+
+<div class="form-check form-switch">
+    <input class="form-check-input" type="radio" name="viewToggle" id="customerView" [(ngModel)]="customerView" (change)="toggleView()" checked>
+    <label class="form-check-label" for="customerView">Customer View</label>
+  </div>
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="radio" name="viewToggle" id="bankManagerView" [(ngModel)]="bankManagerView" (change)="toggleView()">
+    <label class="form-check-label" for="bankManagerView">Bank Manager View</label>
+  </div>
+<br>
+<br>
+
+<div class="card-deck">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Personal Loan</h5>
+        <p class="card-text">
+            Principal Amount: <b>5-20 lakhs</b><br>
+            Tenure: 5-20 years<br>
+            Interest Rate: Base Rate + 0.2% for each year
+        </p>
+        <button *ngIf="bankManagerView" class="btn btn-success">Edit</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Home Loan</h5>
+        <p class="card-text">
+            Principal Amount: <b>5lakhs - 1 crore</b><br>
+            Tenure: 5-20 years<br>
+            Interest Rate: Base rate + 0.2% for each year
+        </p>
+        <button *ngIf="bankManagerView" class="btn btn-success">Edit</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Vehicle Loan</h5>
+        <p class="card-text">
+            Principal Amount: <b>5-30 lakhs</b><br>
+            Tenure: 5-15 years<br>
+            Interest Rate: Base rate + 0.3% for each year
+        </p>
+        <button *ngIf="bankManagerView" class="btn btn-success">Edit</button>
+      </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Medical Loan</h5>
+          <p class="card-text">
+            Principal Amount: <b>2-30 lakhs</b><br>
+            Tenure: 5-10 years<br>
+            Interest Rate: Base rate + 0.25% for each year
+          </p>
+          <button *ngIf="bankManagerView" class="btn btn-success">Edit</button>
+        </div>
+      </div>
+  </div>

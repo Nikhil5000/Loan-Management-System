@@ -1,0 +1,32 @@
+<h2> EMI Details</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> ID </th>
+            <th> CustomerId </th>
+            <th>LoanplanId</th>
+            <th>EMIAmount</th>
+            <th>NO.Of Emi</th>
+            <th>Name</th>
+            <th>status</th>
+            <th>View History</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> {{customer.id}} </td>
+            <td> {{customer.customerid}} </td>
+            <td> {{customer.loanplanid}} </td>
+            <td> {{customer.emiamount}} </td>
+            <td> {{customer.numberofemis}} </td>
+            <td> {{customer.customername}} </td>
+           
+            <td> {{customer.emistatus}} </td>
+            <td>
+                <button (click) = "getPaymentHistory(customer.loanplanid)" class="btn btn-info">View History</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+

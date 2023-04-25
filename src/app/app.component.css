@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+    padding-bottom: 0;
+    padding-top: 10px;
+}
+
+.logo {
+    background-image: linear-gradient(to right, #727373, #8a8b8c, #a3a5a5, #bdbebf, #d7d9da, #dbdddf, #e0e2e3, #e4e6e8, #d2d5d7, #c1c3c7, #b0b3b6, #a0a2a6);
+    height: 80px;
+}
+
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    color: white;
+    z-index: 1;
+
+}

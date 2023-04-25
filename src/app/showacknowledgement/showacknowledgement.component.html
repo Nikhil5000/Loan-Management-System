@@ -1,0 +1,38 @@
+<app-admin-menu></app-admin-menu>
+<h2>Acknowledgement</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Loan Plan Id</th>
+            <th>Loan Plan Name</th>
+            <th>Loan Type Id</th>
+            <th>Principal Amount</th>
+            <th>Tenure</th>
+            <th>Interest Rate</th>
+            <th>Interest Amount</th>
+            <th>Total Payable</th>
+            <th>EMI</th>
+            <th>Plan Valididty</th>
+            <th>Plan Added On</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let addLoanPlan of loanPlans">
+            <td>{{addLoanPlan.planId}}</td>
+            <td>{{addLoanPlan.planName}}</td>
+            <td>{{addLoanPlan.loanTypeId}}</td>
+            <td>{{addLoanPlan.principalAmount}}</td>
+            <td>{{addLoanPlan.tenure}}</td>
+            <td>{{addLoanPlan.interestRate}}</td>
+            <td>{{addLoanPlan.interestAmount}}</td>
+            <td>{{addLoanPlan.totalPayable}}</td>
+            <td>{{addLoanPlan.emi}}</td>
+            <td>{{addLoanPlan.planValidity}}</td>
+            <td>{{addLoanPlan.planAddedOn}}</td>
+            <td>
+                <button (click)="editLoanPlan(addLoanPlan.planId)" class="btn btn-info">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

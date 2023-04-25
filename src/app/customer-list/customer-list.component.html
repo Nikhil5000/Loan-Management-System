@@ -1,0 +1,33 @@
+<app-admin-menu></app-admin-menu>
+<h2>Customer-List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th> ID </th>
+            <th> CustomerId </th>
+            <th>LoanplanId</th>
+            <th>EMIAmount</th>
+            <th>NO.Of Emi</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>PAN</th>
+            <th>status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customers">
+            <td> {{customer.id}} </td>
+            <td> {{customer.customerid}} </td>
+            <td> {{customer.loanplanid}} </td>
+            <td> {{customer.emiamount}} </td>
+            <td> {{customer.numberofemis}} </td>
+            <td> {{customer.customername}} </td>
+            <td> {{customer.customerphone}} </td>
+            <td> {{customer.customeraddress}} </td>
+            <td> {{customer.customerpan}} </td>
+            <td> {{customer.emistatus}} </td>
+        </tr>
+    </tbody>
+
+</table>

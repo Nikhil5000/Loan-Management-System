@@ -1,0 +1,76 @@
+<app-menu></app-menu>
+<div class="title">
+    <h1 class="heading">New Extension Request Form</h1>
+</div>
+<br>
+<div class="container">
+    <h3>Raise New Extension Request</h3>
+    <div class="container1">
+        <form id="myForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="requestId">Request Id</label>
+                <input type="number" class="form-control" id="requestId" placeholder="Enter requestId"
+                    [(ngModel)]="request.requestId" [ngModelOptions]="{standalone: true}" name="emisId" required>
+            </div>
+            <div class="form-group">
+                <label for="emisId">EMIs Id</label>
+                <input type="number" class="form-control" id="emisId" placeholder="Enter EMIs Id"
+                    [(ngModel)]="request.emisId" [ngModelOptions]="{standalone: true}" name="emisId" required>
+            </div>
+
+            <div class="form-group">
+                <label for="customerId">Customer Id</label>
+                <input type="number" class="form-control" id="customerId" placeholder="Enter Customer Id"
+                    name="customerId" [(ngModel)]="request.customerId" [ngModelOptions]="{standalone: true}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="loanPlanId">Loan Plan Id</label>
+                <input type="number" class="form-control" id="loanPlanId" placeholder="Enter Loan Plan Id"
+                    name="loanPlanId" [(ngModel)]="request.loanPlanId" [ngModelOptions]="{standalone: true}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="reason">Reason</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select name="extensionReasons" [(ngModel)]="request.reason" [ngModelOptions]="{standalone: true}">
+                    <option value="" selected disabled>-Select Reason-</option>
+                    <option value="abc">ABC</option>
+                    <option value="mno">MNO</option>
+                    <option value="pqr">PQR</option>
+                    <option value="xyz">XYZ</option>
+                    <option value="other">other</option>
+                </select>
+                <div *ngIf="request.reason === 'other'">
+                    <label for="otherreason">Other Reason</label>
+                    <input type="text" name="otherreason" [(ngModel)]="request.otherReason">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="reqdate">Request Raised On</label>&nbsp;
+                <input type="date" id="reqDate" name="reqDate" [(ngModel)]="request.requestRaisedOn"
+                    [ngModelOptions]="{standalone: true}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="etadate">ETA Payment Date</label>&nbsp;
+                <input type="date" id="etaDate" name="etaDate" [(ngModel)]="request.etaPaymentDate"
+                    [ngModelOptions]="{standalone: true}" required>
+            </div>
+            <div class="form-group">
+                <label for="requestStatus">Request Status</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <select name="requestStatus" [(ngModel)]="request.requestStatus">
+                    <option value="New">New</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submitBtn" class="btn btn-success">Submit</button>
+
+            </div>
+        </form>
+    </div>
+
+
+</div>

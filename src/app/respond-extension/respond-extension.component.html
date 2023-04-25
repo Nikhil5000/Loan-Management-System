@@ -1,0 +1,35 @@
+<app-admin-menu></app-admin-menu>
+<div class="tit">
+    <h3>View Request Details</h3>
+</div>
+<br>
+<div class="container">
+    <div>
+        <label><b> Request ID: </b></label> {{request.requestId}}
+    </div>
+    <div>
+        <label><b> EMIs ID: </b></label> {{request.emisId}}
+    </div>
+    <div>
+        <label><b> Customer ID: </b></label> {{request.customerId}}
+    </div>
+    <div>
+        <label><b> Loan Plan ID: </b></label> {{request.loanPlanId}}
+    </div>
+    <div>
+        <label><b> Reason: </b></label> {{request.reason}}
+    </div>
+    <div>
+        <label><b> Request Raised On: </b></label> {{request.requestRaisedOn}}
+    </div>
+    <div>
+        <label><b> ETA Payment Date: </b></label> {{request.etaPaymentDate}}
+    </div>
+    <div>
+        <label><b> Request Status: </b></label> {{request.requestStatus}}
+    </div>
+    <div class="button-group">
+        <button class="btn btn-success" (click)="approveRequest()">Approve</button>
+        <button class="btn btn-danger" (click)="rejectRequest()">Reject</button>
+    </div>
+</div>
